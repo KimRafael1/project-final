@@ -1,0 +1,14 @@
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin element-positioning {
+    display: flex;
+    margin: 5px;
+    gap: 14px ;
+    align-items: center;
+  }
+
+  
