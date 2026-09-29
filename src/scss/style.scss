@@ -4,7 +4,17 @@
   @import 'header';
   @import 'main';
   @import 'menu';
+  @import 'swiper';
 
+
+  html {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+  display: none;
+  } 
+
+}
 
   body {
     font-family: 'TT Lakes', sans-serif;
