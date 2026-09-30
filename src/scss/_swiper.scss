@@ -1,7 +1,8 @@
-.repair-section {
-height: 196px;
-background: linear-gradient(#f8f8f8, #ffffff);
-margin-top: 20px;
+.repair__section-brands {
+    height: 196px;
+    margin-top: 35px;
+  
+
 }
 
 .swiper {
@@ -11,15 +12,8 @@ display: flex;
 flex-direction: column;
 justify-content: flex-end;
 
-&-text {
-padding: 10px;
-color: $colorTile;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: -0.2px;
-text-transform: uppercase;
-background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+&__text {
+    @include swiper-text;
 }
 
 &-wrapper {
@@ -27,20 +21,20 @@ align-items: center;
 height: 130px;
 }
 
-&-slide {
-background-color: #ffffff !important;
-color: black;
-flex-shrink: 0 !important;
-width: 240px !important;
-height: 72px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-border-radius: 10px;
-border: 1px solid #eaeaea;
-}
+&--brands {
+   background-color: #ffffff !important;
+   flex-shrink: 0 !important;
+   width: 240px !important;
+   height: 72px;
+   display: flex;
+   border-radius: 10px;
+   justify-content: space-around;
+   align-items: center;
+   border: 1px solid #eaeaea;
+  }
 
-&-button {
+
+&--button {
 width: 40px;
 height: 40px;
 display: flex;
@@ -51,24 +45,21 @@ border: 2px solid #ff3e79;
 background-color: transparent;
 cursor: pointer;
 
-
 &:hover {
   transform: scale(1.1);
 }
-
-
 }
 
-&-arrow {
+&--arrow {
 width: 7px;
 height: 7px;
-border-top: 2px solid #ff3e79;
-border-right: 2px solid #ff3e79;
+border-top: 2px solid $buttonColor;
+border-right: 2px solid $buttonColor;
 transform: rotate(45deg);
 margin-right: 4px;
 }
 
-&-btn-none {
+&__btn-none {
 display: none;
 }
 
@@ -77,12 +68,13 @@ display: block;
 }
 }
 
+
 .arrow-rotate {
 transform: rotate(180deg);
 }
 
 @media (min-width: 768px) {
-.repair-section {
+.repair__section-brands {
 height: auto;
 }
 
@@ -108,7 +100,7 @@ padding: 10px;
   display: none;
 }
 
-&-btn-none {
+&__btn-none {
   display: flex;
   align-items: center;
   gap: 8px;

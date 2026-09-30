@@ -55,7 +55,7 @@ window.addEventListener('resize', initSwiper);
 
 
 const newElement = document.querySelectorAll('.swiper-none');
-const newButton = document.querySelector('.swiper-btn-none');
+const newButton = document.querySelector('.swiper__btn-none');
 const newText = document.querySelector('.swiper-btn-text');
 const arrowBtn = document.querySelector('.swiper-btn-arrow')
 

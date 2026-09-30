@@ -11,4 +11,15 @@
     align-items: center;
   }
 
+  @mixin swiper-text {
+    padding: 10px;
+    color: $colorTile;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    background: $backgroundGradient;
+  }
+
   
