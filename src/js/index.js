@@ -52,6 +52,7 @@ function initSwiper() {
                 centeredSlides: true,
                 slidesOffsetAfter: 50,
 
+
                 freeMode: {
                     enabled: true,
                     sticky: false,
@@ -78,6 +79,7 @@ function initSwiper() {
                 loop: true,
                 centeredSlides: true,
                 slidesOffsetAfter: 50,
+
 
                 freeMode: {
                     enabled: true,
@@ -118,18 +120,17 @@ initSwiper();
 
 window.addEventListener('resize', initSwiper);
 
-const newElement = document.querySelectorAll('.swiper-none');
-const newButton = document.querySelector('.swiper__btn-none');
-const newText = document.querySelector('.swiper-btn-text');
-const arrowBtn = document.querySelector('.swiper-btn-arrow')
+const newElement = document.querySelectorAll('.repair__section-brands .swiper-none');
+const newButton = document.querySelector('.repair__section-brands .swiper__btn-none');
+const newText = document.querySelector('.repair__section-brands .swiper-btn-text');
+const arrowBtn = document.querySelector('.repair__section-brands .swiper-btn-arrow')
 
 
 
 
 newButton.addEventListener('click', () => { 
 
-    const overtl =
-        newElement[0].classList.contains('swiper-none');
+    const overtl = newElement[0].classList.contains('swiper-none');
 
 
     newElement.forEach(element => {
@@ -139,6 +140,7 @@ newButton.addEventListener('click', () => {
         } else {
             element.classList.add('swiper-none');
         }
+
 
     });
 
@@ -154,6 +156,39 @@ newButton.addEventListener('click', () => {
         arrowBtn.classList.remove('arrow-rotate');
 
 
+    }
+
+});
+
+const devicesElement = document.querySelectorAll('.repair__section-devices .swiper-none');
+const devicesButton = document.querySelector('.repair__section-devices .swiper__btn-none');
+const devicesText = document.querySelector('.repair__section-devices .swiper-btn-text');
+const devicesBtn = document.querySelector('.repair__section-devices .swiper-btn-arrow')
+
+
+
+devicesButton.addEventListener ('click' ,() => {
+
+    const isHidden = devicesElement[0].classList.contains('swiper-none');
+
+    devicesElement.forEach(element => {
+
+        if(isHidden) {
+            element.classList.remove ('swiper-none')
+
+        }else {
+            element.classList.add ('swiper-none')
+        }
+    });
+
+    if(isHidden) {
+       devicesText.textContent = 'Скрыть все'
+       
+       devicesBtn.classList.add ('arrow-rotate')
+    }else {
+        devicesText.textContent = 'Показать все'
+
+         devicesText.classList.remove('arrow-rotate');
     }
 
 });

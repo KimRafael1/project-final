@@ -1,10 +1,12 @@
 .repair__section-devices {
+  min-height: 300px;
+  height: auto;
   position: relative;
-  height: 300px;
 }
 
 .repair__section-price {
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   position: relative;
 }
 
@@ -21,6 +23,7 @@
 
 &__wraper-brands {
     align-items: center;
+
     height: 130px;
 }
 
@@ -79,7 +82,9 @@
 }
 
 &__wraper-devise {
-    height: 200px;
+  min-width: 300px;
+  height: auto;
+
 }
 
 &--devices {
@@ -166,8 +171,10 @@
 }
 
 &__wraper-devise {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -180,9 +187,11 @@
 .swiper {
 
 &__wraper-brands {
-  grid-template-columns: repeat(4, 300px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
 
 }
 
@@ -190,10 +199,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: auto;
-  margin-bottom: 24px;
-  justify-items: center;
+  justify-content: center;
 }
 
+&--devices{
+  &:nth-child(4) {
+    display: flex;
+  }
+}
 
 &--brands {
   width: 240px !important;
