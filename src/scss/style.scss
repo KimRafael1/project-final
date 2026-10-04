@@ -5,6 +5,7 @@
   @import 'main';
   @import 'menu';
   @import 'swiper';
+  @import 'footer';
 
 
   html {
@@ -14,6 +15,12 @@
   display: none;
   } 
 
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
   body {

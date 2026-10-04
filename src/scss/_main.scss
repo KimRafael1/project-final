@@ -89,7 +89,6 @@
 }
 
 
-/* DESKTOP */
 
 @media (min-width: 1120px) {
   body {
@@ -97,8 +96,6 @@
   }
 
   .main {
-    padding-right: 20px;
-
     &__picture {
       width: 820px;
       height: auto;
@@ -113,7 +110,7 @@
     &__service-computer {
       display: flex;
       gap: 30px;
-      margin: 20px 0 20px auto;
+      margin: 20px 10px 20px auto;
     }
 
     &__content-text {

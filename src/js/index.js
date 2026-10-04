@@ -181,14 +181,15 @@ devicesButton.addEventListener ('click' ,() => {
         }
     });
 
-    if(isHidden) {
+    if (isHidden) {
        devicesText.textContent = 'Скрыть все'
        
        devicesBtn.classList.add ('arrow-rotate')
+
     }else {
         devicesText.textContent = 'Показать все'
 
-         devicesText.classList.remove('arrow-rotate');
+        devicesBtn.classList.remove('arrow-rotate');
     }
 
 });

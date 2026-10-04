@@ -1,0 +1,78 @@
+.footer {
+    padding: 15px;
+    &__information {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: $textColor;
+    }
+    &__button {
+        font-size: 16px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &__author {
+        @include flex-center;
+        text-indent: 60px;
+        color: $colorTile;
+        font-size: 14px;
+    }
+
+    &__privacy-policy {
+        @include flex-center;
+        color: $colorTile;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    &__offer {
+        @include flex-center;
+        color: $colorTile;
+        font-size: 14px;
+        text-indent: 10px;
+        margin-top: 10px;
+    }
+
+    &__arrow {
+       width: 7px;
+       height: 7px;
+       border-top: 2px solid $buttonColor;
+       border-right: 2px solid $buttonColor;
+       transform: rotate(45deg);
+       display: block;
+
+
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__information {
+            width: 410px;
+        }
+
+        &__additional-information {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__offer {
+            width: 230px;
+            text-align: right;
+            text-align-last: end;
+        }
+
+    }
+
+}
+
+@media (min-width: 1120px) {
+    .footer {
+        &__offer {
+            width: 340px;
+        }
+    }
+}

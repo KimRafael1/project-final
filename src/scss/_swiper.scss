@@ -10,6 +10,12 @@
   position: relative;
 }
 
+.repair__section-price {
+  min-height: 300px;
+  height: auto;
+  position: relative
+}
+
 .swiper {
     width: 100%;
     background-color: #f8f8f8;
@@ -23,7 +29,6 @@
 
 &__wraper-brands {
     align-items: center;
-
     height: 130px;
 }
 
@@ -36,7 +41,7 @@
     border-radius: 10px;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid #eaeaea;
+    border: 1px solid $borders;
   }
 
 
@@ -92,6 +97,8 @@
     height: 160px;
     background-color: $colorChildELement ;
     padding: 15px;
+    border-radius: 5px;
+    border: 1px solid $borders;
     
 }
 
@@ -102,15 +109,58 @@
   height: 200px;
 }
 
-&--price {
+
+
+
+}
+
+.price-card {
   width: 270px;
   height: 200px;
   background-color: $colorChildELement ;
-  padding-left: 10px ;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 1px solid $borders;
+  position: relative;
 
+
+  &__label {
+    color: $colorTile;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  &__button {
+    width: 119px;
+    height: 32px;
+    font-size:12px;
+    color: $colorChildELement;
+    font-weight: bold;
+    background-color: $buttonColor;
+    border:none;
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  &__arrow {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid $borders;
+    border-right: 2px solid $borders;
+    transform: rotate(45deg);
+    margin-left: 5px;
+  }
+
+  &__label-none {
+    display: none;
+  }
 }
 
-}
+
 
 
 .arrow-rotate {
@@ -151,8 +201,8 @@
   height: 24px;
   border: none;
   background: transparent;
-  margin-bottom: 20px;
   cursor: pointer;
+  margin: 20px 0 0 30px;
 }
 
 &-pagination {
@@ -179,6 +229,45 @@
   gap: 20px;
 }
 
+&__wraper-price {
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+&__wraper-price {
+
+  border-radius: 10px;
+}
+
+
+.price-card {
+   width: 100%;
+   min-width: 200px;
+   height: 70px;
+   display: grid;
+   grid-template-columns: 1fr 150px 170px 200px;
+   align-items: center;
+   padding: 0 25px;
+   background-color: #fff;
+   border: none;
+   border-bottom: 1px solid $borders;
+
+   &__label {
+    display: none;
+   }
+
+   &__label-none {
+     display: grid;
+     grid-template-columns: 1fr 150px 150px 220px;
+     align-items: center;
+     margin-bottom: 10px;
+     color: $colorTile;
+   }
+}
+
 
 }
 }
@@ -192,8 +281,8 @@
   column-gap: 10px;
   justify-items: center;
   align-items: center;
-
 }
+
 
 &__wraper-devise {
   display: grid;
@@ -203,6 +292,9 @@
 }
 
 &--devices{
+  width: 240px;
+  height: 160px;
+
   &:nth-child(4) {
     display: flex;
   }
@@ -216,6 +308,7 @@
     display: flex;
   }
 }
+
 
 
 }
