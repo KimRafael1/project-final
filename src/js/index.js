@@ -53,6 +53,7 @@ function initSwiper() {
                 slidesOffsetAfter: 50,
 
 
+
                 freeMode: {
                     enabled: true,
                     sticky: false,
@@ -78,7 +79,8 @@ function initSwiper() {
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: true,
-                slidesOffsetAfter: 50,
+                slidesOffsetAfter: 30,
+
 
 
                 freeMode: {
@@ -195,3 +197,20 @@ devicesButton.addEventListener ('click' ,() => {
 });
 
 
+const mainElements = document.querySelectorAll('.main--text-none');
+const mainButton = document.querySelector('.main__button');
+const mainButtonText = document.querySelector('.main__btn-text');
+
+mainButton.addEventListener('click', () => {
+    mainElements.forEach(element => {
+        element.classList.toggle('main--text-none');
+    });
+
+    if (mainElements[0].classList.contains('main--text-none')) {
+        mainButtonText.textContent = 'Читать дальше';
+
+    } else {
+        mainButtonText.textContent = 'Скрыть';
+
+    }
+});

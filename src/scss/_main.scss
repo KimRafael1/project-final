@@ -22,12 +22,15 @@
 
   &__text-phone {
     margin: 15px 0 0 20px;
-    color: $textColor;
+    color: $colorTile;
   }
 
   &__text-none {
-    display: none;
     margin: 20px;
+  }
+
+  &--text-none {
+    display: none;
   }
 
   &__content {
@@ -49,12 +52,22 @@
   }
 
   &__text-computer {
-    display: none;
+    display: none ;
   }
+
+  &__button {
+      border: none;
+      background: none;
+      font-size: 16px;
+    }
+
+    &--text-none {
+      display: none;
+}
 }
 
 
-/* TABLET */
+
 
 @media (min-width: 769px) {
   .main {
@@ -75,16 +88,15 @@
 
     &__text-none {
       display: block;
-      color: $textColor;
     }
 
     &__text-tablet {
       display: inline;
+      color: $colorTile;
+
     }
 
-    &__text-computer {
-      display: none;
-    }
+    
   }
 }
 
@@ -126,8 +138,12 @@
     }
 
     &__text-computer {
-      display: inline;
+      display: inline !important;
+      color: $colorTile;
+
     }
+
+    
   }
 }
 
