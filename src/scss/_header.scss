@@ -35,6 +35,7 @@
 
     &__left {
       @include element-positioning;
+      padding: 15px;
     }
 
     &__line {

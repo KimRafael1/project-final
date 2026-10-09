@@ -210,3 +210,18 @@ mainButton.addEventListener('click', () => {
 
     mainButtonText.textContent = isVisible ? 'Скрыть' : 'Читать дальше';
 });
+
+
+
+
+const burgerButton = document.querySelector('.burger-menu');
+const burgerElement = document.querySelector('.burger-menu__container');
+const closeButton = document.querySelector('.burger-menu__close');
+
+burgerButton.addEventListener('click', () => {
+    burgerElement.classList.add('burger-menu__container--open');
+});
+
+closeButton.addEventListener('click', () => {
+    burgerElement.classList.remove('burger-menu__container--open');
+});
