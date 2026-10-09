@@ -197,20 +197,16 @@ devicesButton.addEventListener ('click' ,() => {
 });
 
 
-const mainElements = document.querySelectorAll('.main--text-none');
+const mainTabletText = document.querySelector('.main__text-tablet');
+const mainComputerText = document.querySelector('.main__text-computer');
 const mainButton = document.querySelector('.main__button');
 const mainButtonText = document.querySelector('.main__btn-text');
 
 mainButton.addEventListener('click', () => {
-    mainElements.forEach(element => {
-        element.classList.toggle('main--text-none');
-    });
+    mainTabletText.classList.toggle('is-visible');
+    mainComputerText.classList.toggle('is-visible');
 
-    if (mainElements[0].classList.contains('main--text-none')) {
-        mainButtonText.textContent = 'Читать дальше';
+    const isVisible = mainComputerText.classList.contains('is-visible');
 
-    } else {
-        mainButtonText.textContent = 'Скрыть';
-
-    }
+    mainButtonText.textContent = isVisible ? 'Скрыть' : 'Читать дальше';
 });
