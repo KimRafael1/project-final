@@ -214,9 +214,22 @@ mainButton.addEventListener('click', () => {
 
 
 
+
 const burgerButton = document.querySelector('.burger-menu');
 const burgerElement = document.querySelector('.burger-menu__container');
 const closeButton = document.querySelector('.burger-menu__close');
+
+function updateBurgerMenu() {
+    if (window.innerWidth >= 1120) {
+        burgerElement.classList.add('burger-menu__container--open');
+    } else {
+        burgerElement.classList.remove('burger-menu__container--open');
+    }
+}
+
+updateBurgerMenu();
+
+window.addEventListener('resize', updateBurgerMenu);
 
 burgerButton.addEventListener('click', () => {
     burgerElement.classList.add('burger-menu__container--open');

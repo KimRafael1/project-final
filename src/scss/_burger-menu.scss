@@ -120,10 +120,34 @@
 
 
 
-  @media (min-width: 1120px) {
-    .burger-menu {
-        &__container {
-            width: 276px;
-        }
+@media (min-width: 1120px) {
+    .burger-menu__container {
+        transform: translateX(0);
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 276px;
+        height: 100vh;
+        z-index: 1000;
+        background-color: #fff;
+        overflow-y: auto;
     }
-  }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .burger-menu__close {
+        display: none;
+    }
+
+    .burger-menu__nav {
+        width: 100%;
+        height: auto;
+    }
+
+    .burger-menu__contact {
+        margin-top: 100px;
+    }
+}

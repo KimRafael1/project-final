@@ -49,6 +49,8 @@
 
 @media (min-width: 768px) {
     .footer {
+        width: calc(100% - 276px);
+        margin-left: 276px;
         &__information {
             width: 410px;
         }

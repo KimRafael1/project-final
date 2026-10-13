@@ -119,9 +119,12 @@
   }
 
   .main {
+    width: calc(100% - 276px);
+    margin-left: 276px;
+
     &__picture {
-      width: 820px;
-      height: auto;
+      width: 531px;
+      height: 307px;
     }
 
     &__service {
